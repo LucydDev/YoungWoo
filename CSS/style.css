@@ -1,0 +1,16 @@
+.body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(D:\Docs\Clases\Laboratorio de Programación III\TP N1\Imagenes - Young Woo\
+    Cetaceos Editado.jpg);
+}
+
+.header{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(45deg, #abbbae, #33889d);
+}
+
+.section1{
+    background-image: url("D:\Docs\Clases\Laboratorio de Programación III\TP N1\Imagenes - Young Woo\Imagen Inicio.jpg")
+}
