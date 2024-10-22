@@ -1,16 +1,66 @@
-.body{
+body{
     margin: 0px;
     padding: 0px;
-    background-image: url(D:\Docs\Clases\Laboratorio de Programación III\TP N1\Imagenes - Young Woo\
-    Cetaceos Editado.jpg);
+    background-image: url("Imagenes - Young Woo/Cetaceos.png");
+    background-size: auto;
+    background-position: top left;
 }
 
-.header{
+header{
     margin: 0px;
     padding: 0px;
-    background: linear-gradient(45deg, #abbbae, #33889d);
+    background: linear-gradient(to bottom, #abbbae, #33889d);
+    border-bottom: 1;
+    border-radius: 0px 0px 15px 15px;
+}
+
+nav{
+    max-width: 500px;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.menu {
+    list-style-type: none; 
+    padding: 20px; 
+    margin: 0; 
+    display: flex;
+}
+
+.item-menu {
+    position: relative; 
+    display: inline-block;
+    padding: 15px;
+}
+
+.desplegable {
+    display: none; 
+    position: absolute; 
+    top: 100%;
+    left: 0; 
+    list-style-type: none; 
+    padding: 0px; 
+    margin: 0px;
+    background-color: white; 
+    border: 1px solid #ccc; 
+    z-index: 1000; 
+}
+
+.item-menu:hover .desplegable {
+    display: block; 
+}
+
+
+.imagen-portada{
+    width: 66%;
+    margin: 0 auto;
+    position: flex;
+    top: 0;
+    padding-top: 5px;
 }
 
 .section1{
-    background-image: url("D:\Docs\Clases\Laboratorio de Programación III\TP N1\Imagenes - Young Woo\Imagen Inicio.jpg")
+    max-width: 1366;
+    background-image: url("Imagenes - Young Woo/Imagen Inicio.jpg");
 }
