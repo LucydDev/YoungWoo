@@ -6,10 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <header>
+        <header class="header">
 
             <div class = "imagen-portada">
                 <img src="Imagenes - Young Woo/Titulo.png" alt="Texto que dice:Woo, una abogada extraordinaria">
@@ -17,9 +20,11 @@
 
             <div>
                 <nav>
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
                     <ul class="menu">
                         <li class="item-menu">
-                            <a href="index.html"> Home </a>
+                            <a href="index.html"> HOME </a>
                                 <ul class="desplegable">
                                     <li >
                                         <a href="#section1"> Sinopsis </a>
@@ -44,11 +49,11 @@
                         </li>
 
                         <li class="item-menu">
-                            <a href="episodios.html"> Episodios </a>
+                            <a href="episodios.html"> EPISODIOS </a>
                         </li>
 
                         <li class="item-menu">
-                            <a href=""> Personajes </a>
+                            <a href=""> PERSONAJES </a>
                                 <ul class="desplegable">
                                     <li class="item-desplegable">
                                         <a href="principales.html"> Principales </a>
@@ -61,11 +66,11 @@
                         </li>
 
                         <li class="item-menu">
-                            <a href="criticas.html"> Criticas </a>
+                            <a href="criticas.html"> CRITICAS </a>
                         </li>
 
                         <li class="item-menu">
-                            <a href=""> Acerca del TEA </a>
+                            <a href=""> ACERCA DEL TEA </a>
                                 <ul class="desplegable">
                                     <li class="item-desplegable">
                                         <a href="info.html"> Información </a>
@@ -84,24 +89,24 @@
         
 
         <section id="section1" class="section1">
-            <div>
+            <div class="titulo">
                 <h1>Woo, una abogada extraordinaria</h1>
             </div>
 
-            <div>
-                <h2>Sinopsis</h2>
+            <div class="subtitulo">
+                <h2><br>Sinopsis</h2>
             </div>
 
-            <article>
+            <article class="sinopsis">
                 <p>
-                    Woo, una abogada extraordinaria (También llamada 이상한 변호사 우영우 en su idioma original) 
-                    es una serie surcoreana que sigue la historia de Woo Young-woo, una mujer brillante perteneciente al
+                    <b>Woo, una abogada extraordinaria</b> (También llamada 이상한 변호사 우영우 en su idioma original) 
+                    es una serie surcoreana que sigue la historia de <b>Woo Young-woo</b>, una mujer brillante perteneciente al
                     espectro autista que acaba de graduarse de abogacía con honores y comienza a trabajar para el prestigioso
                     bufete Hanbada. A lo largo de la serie se nos muestran los desafíos tanto profesionales como personales
                     a los que debe de hacerle frente, se refleja su ingenio e inteligencia al resolver casos complejos
                     de formas poco convencionales mientras se enfrenta a los prejuicios de sus compañeros de trabajo
-                    y clientes en su lucha por demostrar que pese a su condición es tan capaz como cualquier persona neurotípica.
-
+                    y clientes en su lucha por demostrar que pese a su condición es tan capaz como cualquier persona neurotípica. <br>
+                    <br>
                     Esta serie combina temas de autismo, justicia, y relaciones humanas, presentando una mezcla de drama, emoción y comedia.
                 </p>
             </article>
@@ -109,11 +114,135 @@
 
         <section id="section2" class="section2">
             <h2>Galería</h2>
+            <!---
             <article>
-                <div>
-                    <!---Imagenes-->
+                <div class="carrusel">
+                    <button class="prev" onclick="moverCarrusel(-1)">❮</button>
+                    <div class="contenido-carrusel">
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/1.png" alt="">
+                        </div class="miniatura">
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/2.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/3.png" alt="">
+                        </div>
+                        
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/4.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/5.png" alt="">
+                        </div>
+                        
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/6.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/7.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/8.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/9.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/10.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/11.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/12.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/13.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/14.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/15.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/16.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/17.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/18.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/19.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/20.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/21.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/22.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/23.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/24.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/25.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/26.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/27.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/28.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/29.png" alt="">
+                        </div>
+
+                        <div class="miniatura">
+                            <img src="Imagenes - Young Woo/30.png" alt="">
+                        </div>
+                    </div>
+                    <button class="next" onclick="moverCarrusel(1)">❯</button>
                 </div>
             </article>
+            -->
         </section>
 
         <section id="section3" class="section3">
@@ -163,5 +292,6 @@
             <!---Inserte formato footer-->
         </footer>
 
+        <script src="js/script.js"></script>
     </body>
 </html>

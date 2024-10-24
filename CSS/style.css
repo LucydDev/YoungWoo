@@ -1,11 +1,25 @@
+.montserrat-uniquifier{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
 body{
     margin: 0px;
     padding: 0px;
-    background-image: url("Imagenes - Young Woo/Cetaceos.png");
+    background-image: url("../Imagenes - Young Woo/Cetaceos.png");
     background-size: auto;
     background-position: top left;
+
+    /*Fuentes*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
 }
 
+/*Header y Menú*/
 header{
     margin: 0px;
     padding: 0px;
@@ -14,16 +28,20 @@ header{
     border-radius: 0px 0px 15px 15px;
 }
 
+.header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
 nav{
-    max-width: 500px;
-    margin: auto;
-    font-size: 20px;
+    width: 100%;
     margin-top: 20px;
 }
 
 .menu {
     list-style-type: none; 
-    padding: 20px; 
+    padding: 10px; 
     margin: 0; 
     display: flex;
 }
@@ -48,19 +66,98 @@ nav{
 }
 
 .item-menu:hover .desplegable {
-    display: block; 
+    display: block;
 }
 
 
-.imagen-portada{
-    width: 66%;
-    margin: 0 auto;
-    position: flex;
-    top: 0;
-    padding-top: 5px;
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+}
+/*Fin Header y Menú*/
+
+
+.imagen-portada {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
 }
 
+.imagen-portada img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (min-width: 601px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .imagen-portada {
+        width: 100%; 
+        padding-top: 5px;
+        max-width: 100%;
+        height: auto; 
+    }
+}
+
+section {
+    width: 92%;
+    height: 768px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 15px 15px 15px 15px;
+}
+
+/*Seccion 1*/
 .section1{
     max-width: 1366;
-    background-image: url("Imagenes - Young Woo/Imagen Inicio.jpg");
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url("../Imagenes - Young Woo/Imagen Inicio.jpg");
+
+    background-size: cover, cover;
+    background-position: center;
+
+    color: white;
+}
+
+.titulo{
+    font-size: xx-large;
+}
+
+.subtitulo{
+    font-size: x-large;
+}
+
+.sinopsis{
+    width: 600px;
+    margin: 0;
+}
+/*Fin Seccion 1*/
+
+/*Seccion 2*/
+/*Fin Seccion 2*/
+
+footer {
+    margin-left: 0px; /* O define el valor que necesites */
+    padding: 0px;
+    background: linear-gradient(to bottom, #abbbae, #33889d);
+    border-bottom: 1px solid #000; /* Define una unidad y un estilo de borde */
+    border-radius: 0px 0px 15px 15px; /* Bordes redondeados solo en la parte inferior */
 }
