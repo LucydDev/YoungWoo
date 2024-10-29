@@ -8,122 +8,172 @@
     </header>
 
     <body>
-        <header>
+        <header class="header">
+
             <div class = "imagen-portada">
                 <img src="Imagenes - Young Woo/Titulo.png" alt="Texto que dice:Woo, una abogada extraordinaria">
             </div>
 
             <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html"> Home </a>
-                                <ul>
-                                    <li>
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+                    <ul class="menu">
+                        <li class="item-menu">
+                            <a href="index.html"> HOME </a>
+                                <ul class="desplegable">
+                                    <li >
                                         <a href="#section1"> Sinopsis </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section2"> Galeria </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section3"> Actores </a>
                                     </li>
 
-                                    <li>
-                                        <a href="#section4"> Banda Sonora</a>
+                                    <li class="item-desplegable">
+                                        <a href="#section4"> Informacion Tecnica </a>
+                                    </li>
+
+                                    <li class="item-desplegable">
+                                        <a href="#section5"> Banda Sonora </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="episodios.html"> Episodios </a>
+                        <li class="item-menu">
+                            <a href="episodios.html"> EPISODIOS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Personajes </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> PERSONAJES </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="principales.html"> Principales </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="secundarios.html"> Secundarios </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="episodicos.html"> Episodicos </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="criticas.html"> Criticas </a>
+                        <li class="item-menu">
+                            <a href="criticas.html"> CRITICAS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Acerca del TEA </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> ACERCA DEL TEA </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="info.html"> Información </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="representacion.html"> Representación </a>
                                     </li>
                                 </ul>
                         </li>
-
-                        <li>
-                            <a href=""> Extra </a>
-                                <ul>
-                                    <li>
-                                        <a href="info-tecnica.html"> Info Tecnica </a>
-                                    </li>
-                                </ul>
-                        </li>
-
                     </ul>
                 </nav>
             </div>
         </header>
-        
-        <h1>Personajes Secundarios</h1>
-        <section>
-            <h2>Choi Soo-Yeon</h2>
 
-            <div>
-                <img src="" alt="">
+        <section class="formato-titulos">
+            <div class="titulo">
+                <h1>Personajes Secundarios</h1>
             </div>
-
-            <article>
-                <p>Esto es sobre Choi Soo-Yeon</p>
-            </article>
         </section>
 
-        <section>
-            <h2>Kwon Min-Woo</h2>
+        <div class="contenedor-personajes">
+            <section class="formato-personajes">
+                <div>
+                    <img src="Imagenes - Young Woo/Soo-yeon.png" alt="">
+                </div>
+                <article>
+                    <div class="nombre-personaje"">
+                        <h2>Choi Soo-Yeon</h2>
+                    </div>
+    
+                    <p>
+                        Es una colega y amiga cercana de Woo Young-Woo en el bufete de abogados. Soo-Yeon es 
+                        conocida por su calidez, simpatía y lealtad. Se preocupa sinceramente por sus compañeros 
+                        y, en especial, por Young-Woo, a quien suele defender y apoyar en los momentos difíciles. 
+                        <br>
+                        <br>
+                        A pesar de su naturaleza amistosa, también demuestra ser firme y decidida cuando la 
+                        situación lo requiere.
+                    </p>
+                </article>
+            </section>
+    
+            <section class="formato-personajes">
+                <div>
+                    <img src="Imagenes - Young Woo/Min-woo.png" alt="">
+                </div>
+                <article>
+                    <div class="nombre-personaje"">
+                        <h2>Kwon Min-Woo</h2>
+                    </div>
+                    <p>
+                        Es otro abogado en el bufete donde trabaja Young-Woo, y es algo competitivo y ambicioso. 
+                        A menudo se muestra escéptico o crítico hacia Young-Woo debido a su enfoque poco 
+                        convencional en los casos, lo cual puede provocar tensión entre ellos. 
+                        <br>
+                        <br>
+                        Aunque en ocasiones sus acciones pueden parecer egoístas, Min-Woo también enfrenta sus 
+                        propios dilemas morales a lo largo de la serie.
+                    </p>
+                </article>
+            </section>
+    
+            <section class="formato-personajes">
+                <div>
+                    <img src="Imagenes - Young Woo/Sun-young.png" alt="">
+                </div>
+                <article>
+                    <div class="nombre-personaje"">
+                        <h2>Han Sun-Young</h2>
+                    </div>
+                    <p>
+                        Es la directora de Hanbada, el bufete de abogados donde trabaja Woo Young-Woo. 
+                        Es una mujer de negocios inteligente, pragmática y con gran experiencia en el campo legal. 
+                        <br>
+                        <br>
+                        Sun-Young tiene un enfoque meticuloso y estratégico en su trabajo y en la gestión del 
+                        bufete, lo que la convierte en una figura de autoridad y respeto.
+                    </p>
+                </article>
+            </section>
+        </div>
 
-            <div>
-                <img src="" alt="">
+        <footer>
+            <div class="footer-container">
+                <div class="item-footer">
+                    <a href="https://www.netflix.com/ar/title/81518991">
+                        <img src="Imagenes - Young Woo/Logo-Netflix.png" alt="Logo Netflix">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://www.instagram.com/avvocatawoo/?hl=es">
+                        <img src="Imagenes - Young Woo/Logo-Instagram.png" alt="Logo Instagram">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://x.com/whalesclub_io">
+                        <img src="Imagenes - Young Woo/Logo-Twitter B&W.png" alt="Logo Twitter">
+                    </a>
+                </div>
             </div>
 
-            <article>
-                <p>Esto es sobre Kwon Min-Woo</p>
-            </article>
-        </section>
-
-        <section>
-            <h2>Han Sun-Young</h2>
-
-            <div>
-                <img src="" alt="">
+            <div class="texto-footer">
+                <p>Esta web fue hecha por Lu</p>
             </div>
+        </footer>
 
-            <article>
-                <p>Esto es sobre Han Sun-Young</p>
-            </article>
-        </section>
+        <script src="js/script.js"></script>
     </body>
 </html>

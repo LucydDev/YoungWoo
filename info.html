@@ -8,99 +8,320 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
+
             <div class = "imagen-portada">
                 <img src="Imagenes - Young Woo/Titulo.png" alt="Texto que dice:Woo, una abogada extraordinaria">
             </div>
 
             <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html"> Home </a>
-                                <ul>
-                                    <li>
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+                    <ul class="menu">
+                        <li class="item-menu">
+                            <a href="index.html"> HOME </a>
+                                <ul class="desplegable">
+                                    <li >
                                         <a href="#section1"> Sinopsis </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section2"> Galeria </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section3"> Actores </a>
                                     </li>
 
-                                    <li>
-                                        <a href="#section4"> Banda Sonora</a>
+                                    <li class="item-desplegable">
+                                        <a href="#section4"> Informacion Tecnica </a>
+                                    </li>
+
+                                    <li class="item-desplegable">
+                                        <a href="#section5"> Banda Sonora </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="episodios.html"> Episodios </a>
+                        <li class="item-menu">
+                            <a href="episodios.html"> EPISODIOS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Personajes </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> PERSONAJES </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="principales.html"> Principales </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="secundarios.html"> Secundarios </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="episodicos.html"> Episodicos </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="criticas.html"> Criticas </a>
+                        <li class="item-menu">
+                            <a href="criticas.html"> CRITICAS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Acerca del TEA </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> ACERCA DEL TEA </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="info.html"> Información </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="representacion.html"> Representación </a>
                                     </li>
                                 </ul>
                         </li>
-
-                        <li>
-                            <a href=""> Extra </a>
-                                <ul>
-                                    <li>
-                                        <a href="info-tecnica.html"> Info Tecnica </a>
-                                    </li>
-                                </ul>
-                        </li>
-
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <h1>Información sobre TEA</h1>
+        <section class="formato-titulos">
+            <div class="titulo">
+                <h1>Información sobre TEA</h1>
+            </div>
+        </section>
         
-        <div>
+        <section class="section1-info-tea">
+            <div class="titulo-info-tea">
+                <h2>¿Qué es el Trastorno del Espectro Autista?</h2>     
+            </div>
+            <article>
+                <p>
+                    El trastorno del espectro autista (TEA) es un trastorno del neurodesarrollo caracterizado 
+                    por dificultades en la comunicación e interacción social, así como patrones de 
+                    comportamiento, intereses o actividades repetitivos y restringidos. El TEA es un espectro 
+                    amplio, lo que significa que las manifestaciones del trastorno varían considerablemente 
+                    entre las personas, desde casos leves hasta más graves.
+                </p>
+            </article>
+        </section>
 
-            <h2>¿Qué es el Trastorno del Espectro Autista?</h2>
-            
-        </div>
+        <section class="section2-info-tea">
+            <div class="titulo-info-tea">
+                <h2>Características e Implicaciones</h2>
+            </div>
+            <article>
+                <p>
+                    Las personas con TEA pueden presentar algunos o todos los siguientes desafíos:
+    
+                    <li>
+                        <B>Interacción social</B>: Dificultad para comprender normas sociales, mantener 
+                        conversaciones, reconocer emociones en los demás y responder apropiadamente.
+                    </li>
+    
+                    <li>
+                        <B>Comunicación</B>: Algunas personas pueden ser no verbales, mientras que otras pueden tener 
+                        dificultades para usar el lenguaje de manera efectiva o en un contexto adecuado.
+                    </li>
+    
+                    <li>
+                        <B>Conductas repetitivas y rutinas</B>: Esto incluye movimientos repetitivos, adherencia 
+                        a rutinas rígidas y un interés extremo en temas específicos.
+                    </li>
+    
+                    <li>
+                        <B>Procesamiento sensorial</B>: Sensibilidad o hiposensibilidad a estímulos sensoriales, como 
+                        luces, sonidos, texturas o sabores.
+                    </li>
+                </p>
+            </article>
+        </section>
 
-        <article>
+        <section class="section3-info-tea">
+            <div class="titulo-info-tea">
+                <h2>Los Desafios de Una Persona con TEA</h2>
+            </div>
 
-            <p>Información</p>
+            <article>
+                <p>
+                    Las personas neurotípicas a menudo dan por sentado o no tienen en cuenta todo lo que implica 
+                    que una persona sea funcional en la sociedad actual. Las persona con trastorno del espectro 
+                    autista (TEA), quienes pueden experimentar las dificultades antes mencionadas, enfrentan 
+                    desafios en su vida cotidiana debido a las mismas. Estas varían según el grado y las 
+                    características y necesidades únicas de cada persona. 
+                    <br>
+                    <br>
+                    Algunas de las áreas en las que una persona con TEA puede enfrentar retos son:
+                </p>
 
-        </article>
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Interacción y Comunicación Social</h3>
+                    </div>
+
+                    <p>
+                        Dificultad para entender normas sociales: Las reglas implícitas en las interacciones pueden 
+                        ser confusas, como saber cuándo interrumpir, cómo iniciar una conversación o cómo 
+                        interpretar el tono de voz.
+                        <br>
+                        <br>
+                        Expresión de emociones: Expresar sentimientos y entender los de los demás puede ser 
+                        complicado, lo que puede llevar a malentendidos o aislamiento.
+                        <br>
+                        <br>
+                        Interpretación literal del lenguaje: Las personas con TEA pueden interpretar las palabras 
+                        literalmente, dificultando entender bromas, sarcasmo o dobles sentidos.
+                        <br>
+                        <br>
+                        Dificultades para iniciar o mantener amistades: Les puede costar hacer amigos, interpretar 
+                        señales sociales y mantener relaciones.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Adaptación al Cambio y Flexibilidad</h3>
+                    </div>
+
+                    <p>
+                        Resistencia a los cambios en la rutina: La interrupción de una rutina diaria puede generar 
+                        mucha ansiedad, y adaptarse a cambios imprevistos puede ser difícil.
+                        <br>
+                        <br>
+                        Inflexibilidad cognitiva: Les puede resultar complicado considerar otros puntos de vista 
+                        o adaptarse a nuevas formas de resolver problemas, lo que afecta la toma de decisiones y 
+                        la resolución de conflictos.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Dificultades sensoriales</h3>
+                    </div>
+
+                    <p>
+                        Hipersensibilidad o hiposensibilidad: Los estímulos como sonidos fuertes, luces brillantes 
+                        o ciertas texturas pueden ser extremadamente molestos o, en otros casos, poco notables. 
+                        Esto puede llevar a evitar ciertos lugares o actividades.
+                        <br>
+                        <br>
+                        Problemas en la regulación de estímulos sensoriales: Les puede ser complicado filtrar el 
+                        ruido de fondo o concentrarse en tareas cuando hay distracciones.
+                    </p>
+                </article>
+
+                
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Organización y Habilidades Ejecutivas</h3>
+                    </div>
+
+                    <p>
+                        Problemas con la planificación y la gestión del tiempo: La organización de tareas puede 
+                        ser un desafío, así como la dificultad para priorizar actividades o seguir instrucciones 
+                        complejas.
+                        <br>
+                        <br>
+                        Iniciación de tareas: Pueden requerir más tiempo para iniciar actividades, especialmente 
+                        si implican un cambio de enfoque o están fuera de su zona de confort.
+                        <br>
+                        <br>
+                        Manejo del estrés y ansiedad: Las personas con TEA pueden tener niveles elevados de 
+                        ansiedad, especialmente en situaciones sociales o al enfrentarse a cambios, lo que 
+                        afecta su funcionamiento diario.
+                    </p>
+                </article>
+
+                
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Dificultades en el Ámbito Educativo o Laboral</h3>
+                    </div>
+
+                    <p>
+                        Adaptarse a entornos de trabajo o estudio: Las exigencias sociales, la cantidad de 
+                        estímulos y las expectativas pueden generar estrés y ansiedad.
+                        <br>
+                        <br>
+                        Necesidad de instrucciones claras y precisas: A veces es necesario recibir instrucciones 
+                        detalladas, y una falta de claridad puede llevar a confusión y frustración.
+                        <br>
+                        <br>
+                        Dificultad para manejar la crítica: Les puede costar asimilar críticas o interpretarlas 
+                        de manera constructiva, y esto afecta su crecimiento profesional o académico.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Autocuidado y Habilidades Para la Vida Diaria</h3>
+                    </div>
+
+                    <p>
+                        Desarrollo de habilidades de independencia: Actividades cotidianas como preparar 
+                        alimentos, hacer compras o usar el transporte público pueden ser complicadas debido a 
+                        la ansiedad social o la necesidad de adaptarse a cambios constantes.
+                        <br>
+                        <br>
+                        Autoregulación emocional: Les puede resultar difícil gestionar la frustración o el estrés 
+                        en situaciones de alta demanda, lo que puede derivar en conductas de retirada o conductas 
+                        de evitación.
+                    </p>
+                </article>
+            </article>
+        </section>
+
+        <section class="section4-info-tea">
+            <div>
+                <h2>¿Qué Debería Hacer Si Creo que Puedo Tener Rasgos de TEA?</h2>
+            </div>
+            <article>
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Buscar Información</h3>
+                    </div>
+                    <p>
+                        Es bueno y apropiado informarse sobre el TEA y los rasgos asociados, revisando si los 
+                        síntomas coinciden con tu experiencia. Asegúrate de recurrir a fuentes confiables 
+                        pero recorda que es importante no autodiagnosticarse y que esto solo sirve para intentar
+                        entenderte o comprenderte a vos mismo.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="subtitulo-info-tea">
+                        <h3>Hablar con un Profesional de Salud Mental</h3>
+                    </div>
+                    <p>
+                        Consulta con especialistas en la salud mental con experiencia en el diagnóstico de TEA. 
+                        Ellos pueden evaluar de forma más correcta tus síntomas y decidir si es necesario realizar 
+                        una evaluación completa o más profunda al respecto.
+                    </p>
+                </article>
+            </article>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="item-footer">
+                    <a href="https://www.netflix.com/ar/title/81518991">
+                        <img src="Imagenes - Young Woo/Logo-Netflix.png" alt="Logo Netflix">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://www.instagram.com/avvocatawoo/?hl=es">
+                        <img src="Imagenes - Young Woo/Logo-Instagram.png" alt="Logo Instagram">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://x.com/whalesclub_io">
+                        <img src="Imagenes - Young Woo/Logo-Twitter B&W.png" alt="Logo Twitter">
+                    </a>
+                </div>
+            </div>
+
+            <div class="texto-footer">
+                <p>Esta web fue hecha por Lu</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

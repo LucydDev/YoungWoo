@@ -8,107 +8,179 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
+
             <div class = "imagen-portada">
                 <img src="Imagenes - Young Woo/Titulo.png" alt="Texto que dice:Woo, una abogada extraordinaria">
             </div>
 
             <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html"> Home </a>
-                                <ul>
-                                    <li>
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+                    <ul class="menu">
+                        <li class="item-menu">
+                            <a href="index.html"> HOME </a>
+                                <ul class="desplegable">
+                                    <li >
                                         <a href="#section1"> Sinopsis </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section2"> Galeria </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section3"> Actores </a>
                                     </li>
 
-                                    <li>
-                                        <a href="#section4"> Banda Sonora</a>
+                                    <li class="item-desplegable">
+                                        <a href="#section4"> Informacion Tecnica </a>
+                                    </li>
+
+                                    <li class="item-desplegable">
+                                        <a href="#section5"> Banda Sonora </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="episodios.html"> Episodios </a>
+                        <li class="item-menu">
+                            <a href="episodios.html"> EPISODIOS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Personajes </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> PERSONAJES </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="principales.html"> Principales </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="secundarios.html"> Secundarios </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="episodicos.html"> Episodicos </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="criticas.html"> Criticas </a>
+                        <li class="item-menu">
+                            <a href="criticas.html"> CRITICAS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Acerca del TEA </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> ACERCA DEL TEA </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="info.html"> Información </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="representacion.html"> Representación </a>
                                     </li>
                                 </ul>
                         </li>
-
-                        <li>
-                            <a href=""> Extra </a>
-                                <ul>
-                                    <li>
-                                        <a href="info-tecnica.html"> Info Tecnica </a>
-                                    </li>
-                                </ul>
-                        </li>
-
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <h1>Personajes Principales</h1>
-        <section>
-            <h2>Woo Young-Woo</h2>
-            <article>
-                <p>Esto es sobre Woo Young-Woo</p>
-            </article>
+        <section class="formato-titulos">
+            <div class="titulo">
+                <h1>Personajes Principales</h1>
+            </div>
         </section>
+        
+        <div class="contenedor-personajes">
+            <section class="formato-personajes">
+                <div>
+                    <img src="Imagenes - Young Woo/Young-Woo.png" alt="">
+                </div>
+                <article>
+                    <div class="nombre-personaje"">
+                        <h2>Woo Young-Woo</h2>
+                    </div>
+    
+                    <p>
+                        Es la protagonista de la serie, una abogada con trastorno del espectro autista (TEA) y un 
+                        coeficiente intelectual de 164. Destaca por su memoria prodigiosa y su capacidad de resolver 
+                        casos complejos, aunque tiene dificultades en las interacciones sociales. Su pasión por las 
+                        ballenas refleja su interés particular, que utiliza como metáfora en su vida y trabajo. A pesar 
+                        de los desafíos, mantiene una actitud positiva y busca superar sus barreras personales.
+                        <br>
+                        <br>
+                        Es detallista, empática en su propio estilo, con una fuerte conexión emocional con temas que 
+                        le apasionan. Su comportamiento refleja ciertos rasgos característicos del TEA, como 
+                        dificultades en la comunicación social y sensibilidad a los estímulos sensoriales.
+                    </p>
+                </article>
+            </section>
+    
+            <section class="formato-personajes">
+                <div>
+                    <img src="Imagenes - Young Woo/Joon-oh.png" alt="">
+                </div>
+                <article>
+                    <div class="nombre-personaje"">
+                        <h2>Lee Joon-Oh</h2>
+                    </div>
+                    <p>
+                        Es un compañero de trabajo de Woo en el bufete de abogados Hanbada. A lo largo de la serie Joon-Ho, desarrolla 
+                        una relación especial con Woo y se convierte en un pilar emocional para ella, ayudándola a enfrentar las 
+                        dificultades sociales y laborales. Joon-Ho es todo lo que Woo no es en términos de habilidades sociales, lo 
+                        que crea un contraste interesante entre ambos.
+                        <br>
+                        <br>
+                        Es simpático, paciente y considerado, amable, empático, extrovertido, y siempre está dispuesto a ayudar.
+    
+                    </p>
+                </article>
+            </section>
+    
+            <section class="formato-personajes">
+                <div>
+                    <img src="Imagenes - Young Woo/Myung-seok.png" alt="">
+                </div>
+                <article>
+                    <div class="nombre-personaje"">
+                        <h2>Jung Myung-Seok</h2>
+                    </div>
+                    <p>
+                        Es el mentor de Woo Young-Woo y uno de los abogados senior del bufete Hanbada. Al principio, tiene dudas 
+                        sobre las capacidades de Woo debido a su condición, pero con el tiempo llega a valorar profundamente su 
+                        habilidad para resolver casos de manera brillante e incluso poco convencionales. Su relación con Woo se 
+                        transforma de escéptica a respetuosa y de apoyo mutuo.
+                        <br>
+                        <br>
+                        Es serio, profesional, disciplinado, pero también justo y dispuesto a aprender y evolucionar en su percepción 
+                        sobre Woo y sus capacidades.
+    
+                    </p>
+                </article>
+            </section>
+        </div>
 
-        <section>
-            <h2>Lee Joon-Oh</h2>
-            <article>
-                <p>Esto es sobre Lee Joon-Oh</p>
-            </article>
-        </section>
+        <footer>
+            <div class="footer-container">
+                <div class="item-footer">
+                    <a href="https://www.netflix.com/ar/title/81518991">
+                        <img src="Imagenes - Young Woo/Logo-Netflix.png" alt="Logo Netflix">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://www.instagram.com/avvocatawoo/?hl=es">
+                        <img src="Imagenes - Young Woo/Logo-Instagram.png" alt="Logo Instagram">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://x.com/whalesclub_io">
+                        <img src="Imagenes - Young Woo/Logo-Twitter B&W.png" alt="Logo Twitter">
+                    </a>
+                </div>
+            </div>
 
-        <section>
-            <h2>Jung Myung-Seok</h2>
-            <article>
-                <p>Esto es sobre Jung Myung-Seok</p>
-            </article>
-        </section>
+            <div class="texto-footer">
+                <p>Esta web fue hecha por Lu</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

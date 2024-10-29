@@ -8,119 +8,197 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
+
             <div class = "imagen-portada">
                 <img src="Imagenes - Young Woo/Titulo.png" alt="Texto que dice:Woo, una abogada extraordinaria">
             </div>
 
             <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html"> Home </a>
-                                <ul>
-                                    <li>
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+                    <ul class="menu">
+                        <li class="item-menu">
+                            <a href="index.html"> HOME </a>
+                                <ul class="desplegable">
+                                    <li >
                                         <a href="#section1"> Sinopsis </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section2"> Galeria </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="#section3"> Actores </a>
                                     </li>
 
-                                    <li>
-                                        <a href="#section4"> Banda Sonora</a>
+                                    <li class="item-desplegable">
+                                        <a href="#section4"> Informacion Tecnica </a>
+                                    </li>
+
+                                    <li class="item-desplegable">
+                                        <a href="#section5"> Banda Sonora </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="episodios.html"> Episodios </a>
+                        <li class="item-menu">
+                            <a href="episodios.html"> EPISODIOS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Personajes </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> PERSONAJES </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="principales.html"> Principales </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="secundarios.html"> Secundarios </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="episodicos.html"> Episodicos </a>
                                     </li>
                                 </ul>
                         </li>
 
-                        <li>
-                            <a href="criticas.html"> Criticas </a>
+                        <li class="item-menu">
+                            <a href="criticas.html"> CRITICAS </a>
                         </li>
 
-                        <li>
-                            <a href=""> Acerca del TEA </a>
-                                <ul>
-                                    <li>
+                        <li class="item-menu">
+                            <a href=""> ACERCA DEL TEA </a>
+                                <ul class="desplegable">
+                                    <li class="item-desplegable">
                                         <a href="info.html"> Información </a>
                                     </li>
 
-                                    <li>
+                                    <li class="item-desplegable">
                                         <a href="representacion.html"> Representación </a>
                                     </li>
                                 </ul>
                         </li>
-
-                        <li>
-                            <a href=""> Extra </a>
-                                <ul>
-                                    <li>
-                                        <a href="info-tecnica.html"> Info Tecnica </a>
-                                    </li>
-                                </ul>
-                        </li>
-
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <h1>Criticas</h1>
+        <section class="formato-titulos">
+            <div class="titulo">
+                <h1>Criticas</h1>
+            </div>
+        </section>
 
-        <section>
+        <section class="formato-criticas">
+            <div>
+                <h2>Estereotipos en la Representación: El Desafío de 'Woo, una abogada extraordinaria"</h2>
+            </div>
             <article>
-                <p>Critica 1</p>
+                <p>
+                    Si bien la serie fue muy elogiada, en especial por la actuación de Park Eun-bin, en su país 
+                    de origen varias familias con miembros que son parte del TEA han mencionado que la serie 
+                    podría caer en estereotipos simplificados sobre las personas con trastornos del espectro 
+                    autista y presentar un enfoque poco realista. Se ha discutido si realmente muestra una 
+                    representación matizada de las dificultades cotidianas que enfrentan las personas autistas, 
+                    aunque otras opiniones la ven como un avance en la visibilización del tema.
+                </p>
 
-                <a href=""></a>
+                <a href="https://www.lanacion.com.py/estilodevida/2022/09/22/woo-una-abogada-extraordinaria-un-debate-sobre-el-autismo/">ARTICULO COMPLETO</a>
             </article>
         </section>
 
-        <section>
+        <section class="formato-criticas">
+            <div>
+                <h2>Una Mirada a la Diversidad: "Woo, una abogada extraordinaria" y su Impacto en la Concienciación 
+                    sobre el Autismo en el Perú</h2>
+            </div>
             <article>
-                <p>Critica 2</p>
+                <p>
+                    Woo enfrenta obstáculos para socializar y comunicarse debido a su condición, pero destaca por su brillantez 
+                    profesional, habiendo sido graduada con honores de la Universidad Nacional de Seúl. La serie ha sido muy 
+                    popular debido a la combinación de emociones, educación y representación de la diversidad.
+                    <br>
+                    <br>
+                    La serie también resalta características comunes en personas con TEA, como la dificultad para mantener 
+                    contacto visual, intereses intensos en temas específicos (en el caso de Woo, las ballenas), y una memoria 
+                    excepcional para los detalles legales. Además, se mencionan algunos comportamientos relacionados con el 
+                    procesamiento sensorial.
+                    <br>
+                    <br>
+                    En el contexto del Perú, el impacto de la serie ha generado más reflexión sobre el autismo, revelando la 
+                    falta de políticas públicas para apoyar a las personas con TEA, que en el país suman más de 204 mil, según 
+                    la OMS y la Defensoría del Pueblo.
+                    <br>
+                    <br>
+                    Este artículo enfatiza la importancia de una representación cuidadosa y precisa del TEA en los medios, así 
+                    como la necesidad de mejorar la concienciación y el apoyo para las personas con autismo en todo el mundo.
 
-                <a href=""></a>
+                </p>
+
+                <a href="https://puntoseguido.upc.edu.pe/woo-una-abogada-extraordinaria-analisis-de-la-conducta-de-una-persona-con-tea/">ARTICULO COMPLETO</a>
             </article>
         </section>
 
-        <section>
+        <section class="formato-criticas">
+            <div>
+                <h2>Autenticidad y Estereotipos: La Dualidad de "Woo, una abogada extraordinaria" en la 
+                    Representación del Autismo</h2>
+            </div>
             <article>
-                <p>Critica 3</p>
+                <p>
+                    Una persona con asperger menciona que Woo, una abogada extraordinaria es una serie que combina 
+                    temas jurídicos y autismo de forma auténtica. Aunque su representación del autismo tiene 
+                    algunos estereotipos, destaca por su delicadeza y profundidad emocional. Los casos legales 
+                    son centrales y muestran la capacidad de Woo Young-woo como abogada, mientras mantiene un 
+                    enfoque amable y humanista del espectro autista. La serie es poética, visualmente moderna y 
+                    mantiene un nivel alto durante todos los episodios, con pocos altibajos.
+                </p>
 
-                <a href=""></a>
+                <a href="https://www.filmaffinity.com/es/user/rating/159426/913698.html">ARTICULO COMPLETO</a>
             </article>
         </section>
 
-        <section>
+        <section class="formato-criticas">
+            <div>
+                <h2>Desafíos Cotidianos y Brillantez Profesional: La Conexión Emocional en "Woo, una abogada 
+                    extraordinaria"</h2>
+            </div>
             <article>
-                <p>Critica 4</p>
+                <p>
+                    En esta serie se dejan ver desafíos cotidianos que para otros serían simples, como viajar 
+                    en metro o atravesar una puerta giratoria. A pesar de las dificultades, su actitud positiva 
+                    y capacidad profesional destacan, lo que genera una conexión emocional con los espectadores. 
+                    La serie mezcla drama y comedia, y muestra cómo Woo resuelve casos complejos mientras lucha 
+                    por ser aceptada en un entorno que no siempre la entiende.
+                </p>
 
-                <a href=""></a>
+                <a href="https://www.infobae.com/que-puedo-ver/2022/07/25/woo-una-abogada-extraordinaria-la-emotiva-historia-que-guarda-varias-reflexiones-sobre-el-autismo/">ARTICULO COMPLETO</a>
             </article>
         </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="item-footer">
+                    <a href="https://www.netflix.com/ar/title/81518991">
+                        <img src="Imagenes - Young Woo/Logo-Netflix.png" alt="Logo Netflix">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://www.instagram.com/avvocatawoo/?hl=es">
+                        <img src="Imagenes - Young Woo/Logo-Instagram.png" alt="Logo Instagram">
+                    </a>
+                </div>
+                <div class="item-footer">
+                    <a href="https://x.com/whalesclub_io">
+                        <img src="Imagenes - Young Woo/Logo-Twitter B&W.png" alt="Logo Twitter">
+                    </a>
+                </div>
+            </div>
+
+            <div class="texto-footer">
+                <p>Esta web fue hecha por Lu</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

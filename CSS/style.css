@@ -19,6 +19,32 @@ body{
     font-size: large;
 }
 
+section {
+    width: 92%;
+    height: 768px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to right, lightgray, gray);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.formato-titulos{
+    width: 92%;
+    height: 30px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to right, lightgray, gray);
+    border-radius: 15px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
 /*Header y Menú*/
 header{
     margin: 0px;
@@ -26,6 +52,7 @@ header{
     background: linear-gradient(to bottom, #abbbae, #33889d);
     border-bottom: 1;
     border-radius: 0px 0px 15px 15px;
+    text-decoration: none;
 }
 
 .header {
@@ -50,6 +77,9 @@ nav{
     position: relative; 
     display: inline-block;
     padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .desplegable {
@@ -63,10 +93,32 @@ nav{
     background-color: white; 
     border: 1px solid #ccc; 
     z-index: 1000; 
+    min-width: 150px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.desplegable li {
+    padding: 10px; 
+}
+
+.desplegable li a {
+    text-decoration: none;
+    color: black; 
+    display: block; 
+}
+
+.desplegable li:hover {
+    background-color:#68adbe;
 }
 
 .item-menu:hover .desplegable {
     display: block;
+}
+
+.item-menu:hover {
+    background-color: white; 
+    color: black;
 }
 
 
@@ -115,16 +167,8 @@ nav{
     }
 }
 
-section {
-    width: 92%;
-    height: 768px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: lightgray;
-    border-radius: 15px 15px 15px 15px;
-}
 
-/*Seccion 1*/
+/*Home*/
 .section1{
     max-width: 1366;
     background:
@@ -149,15 +193,585 @@ section {
     width: 600px;
     margin: 0;
 }
-/*Fin Seccion 1*/
 
-/*Seccion 2*/
-/*Fin Seccion 2*/
+@media screen and (max-width: 600px) {
+    .titulo {
+        font-size: x-large; 
+        text-align: center; 
+    }
 
-footer {
-    margin-left: 0px; /* O define el valor que necesites */
-    padding: 0px;
-    background: linear-gradient(to bottom, #abbbae, #33889d);
-    border-bottom: 1px solid #000; /* Define una unidad y un estilo de borde */
-    border-radius: 0px 0px 15px 15px; /* Bordes redondeados solo en la parte inferior */
+    .subtitulo {
+        font-size: large;
+        text-align: center;
+    }
+
+    .sinopsis {
+        width: 100%;
+        font-size: medium;
+        margin: 0;
+    }
+
+    .section1 {
+        padding: 15px;
+    }
 }
+/*Fin Home*/
+
+
+/*Galería*/
+.section2 {
+    width: 92%;
+    height: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to right, lightgray, gray);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.section2 h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.carrusel { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 95%; 
+    margin: 20px auto; 
+}
+
+.contenido-carrusel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(100% * 3); 
+}
+
+.miniatura {
+    min-width: calc(100% / 3);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.miniatura img {
+    width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.miniatura img:hover {
+    transform: scale(1.1);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.fullscreen img {
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+}
+/*Fin Galería*/
+
+
+/*Actores*/
+.section3 {
+    width: 92%;
+    height: 768px;
+    text-align: center;
+}
+
+.actores-carrusel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 25px;
+    z-index: 1;
+}
+
+.formato-actores {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    background: #33889d;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+button.prev, button.next {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+/*Fin Actores*/
+
+
+/*Informacion tecnica*/
+.section4 {
+    width: 92%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px; 
+}
+
+.contenido-info-tecnica {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.formato-info-tecnica {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.titulo-dato {
+    background-color: #33889d; 
+    color: white;
+    padding: 10px; 
+    flex: 1; 
+}
+
+.contenido-dato {
+    background-color: white;
+    color: black;
+    padding: 10px; 
+    flex: 2;
+}
+
+.titulo-dato p, .contenido-dato p {
+    margin: 0;
+}
+/*Fin Informacion tecnica*/
+
+
+/*Banda Sonora*/
+.section5 {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formato-banda-sonora {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.formato-imagen-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.titulo-banda-sonora h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.imagen-banda-sonora img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.formato-tracklist {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+}
+
+.item-tracklist {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imagen-tracklist img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.texto-tracklist p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .formato-banda-sonora {
+        align-items: center;
+        flex-direction: column;
+    }
+    .formato-imagen-titulo {
+        margin-bottom: 10px;
+    }
+}
+/*Banda Sonora*/
+
+
+/*Episodios*/
+.formato-episodios {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+    height: auto;
+    background: linear-gradient(to right, lightgray, gray);
+}
+
+.formato-episodios img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.formato-episodios article {
+    flex: 1;
+    font-size: x-large;
+}
+
+.formato-episodios .subtitulo-episodio {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .formato-episodios {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formato-episodios img {
+        max-width: 100%;
+    }
+
+    .formato-episodios article {
+        width: 100%;
+    }
+}
+/*Fin Episodios*/
+
+
+/*Personajes*/
+.contenedor-personajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.formato-personajes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; 
+    padding: 20px;
+    background: linear-gradient(to right, lightgray, gray);
+    border-radius: 15px;
+    box-sizing: border-box;
+    min-height: 50vh;
+    height: auto;
+}
+
+.formato-personajes img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.nombre-personaje {
+    width: 100%;
+    text-align: center;
+}
+
+.nombre-personaje h2 {
+    margin: 0; 
+}
+
+@media (max-width: 600px) {
+    .formato-personajes {
+        width: 100%; 
+        min-height: 60vh;
+    }
+}
+/*Fin Personajes*/
+
+
+/*Criticas*/
+.formato-criticas{
+    flex-direction: column;
+    width: 92%; 
+    padding: 20px;
+    background: linear-gradient(to right, lightgray, gray);
+    border-radius: 15px;
+    min-height: 50vh;
+    height: auto;
+    font-size: x-large;
+}
+/*Fin Criticas*/
+
+
+/*Informacion*/
+.section1-info-tea{
+    width: 92%;
+    font-size: x-large;
+    display: block;
+    height: auto;
+}
+
+.section2-info-tea{
+    width: 92%;
+    font-size: x-large;
+    display: block;
+    height: auto;
+}
+
+.section3-info-tea{
+    width: 92%;
+    font-size: x-large;
+    display: block;
+    height: auto;
+}
+
+.section4-info-tea{
+    width: 92%;
+    font-size: x-large;
+    display: block;
+    height: auto;
+}
+
+[class*="section-info-tea"] article {
+    margin: 10px 0;
+}
+
+.titulo-info-tea{
+    text-align: center;
+}
+
+.subtitulo-info-tea{
+    padding: 10px;
+    padding-bottom: 0;
+    color: #33889d;
+}
+
+@media (max-width: 600px) {
+
+    .section1-info-tea{
+        font-size: large;
+        padding: 15px;
+    }
+
+    .section2-info-tea{
+        font-size: large;
+        padding: 15px;
+    }
+
+    .section3-info-tea{
+        font-size: large;
+        padding: 15px;
+    }
+
+    .section4-info-tea{
+        font-size: large;
+        padding: 15px;
+    }
+    
+    .titulo-info-tea h2 {
+        font-size: 1.6em; 
+    }
+
+    .subtitulo-info-tea h3 {
+        font-size: 1.2em;
+    }
+}
+/*Fin Informacion*/
+
+
+/*Representación*/
+.formato-titulos-representacion{
+    width: 92%;
+    height: 40px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(to right, lightgray, gray);
+    border-radius: 15px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion1-representacion-tea{
+    width: 92%;
+    font-size: x-large;
+    display: block;
+    height: auto;
+}
+
+.section2-representacion-tea{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0)),
+    url("../Imagenes - Young Woo/Atypical.png");;
+
+    background-size: cover, cover;
+    background-position: center;
+
+    color: white;
+}
+
+.section3-representacion-tea{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0)),
+    url("../Imagenes - Young Woo/As\ We\ See\ It.png");;
+
+    background-size: cover, cover;
+    background-position: center;
+
+    color: white;
+}
+
+.section4-representacion-tea{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0)),
+    url("../Imagenes - Young Woo/A\ Brilliant\ Young\ Mind.png");;
+
+    background-size: cover, cover;
+    background-position: center;
+
+    color: white;
+}
+
+.section5-representacion-tea{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0)),
+    url("../Imagenes - Young Woo/Loop.png");;
+
+    background-size: cover, cover;
+    background-position: center;
+
+    color: white;
+}
+
+.section6-representacion-tea{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0)),
+    url("../Imagenes - Young Woo/Float.png");;
+
+    background-size: cover, cover;
+    background-position: center;
+
+    color: white;
+}
+/*Fin Representación*/
+
+
+/*Footer*/
+footer {
+    padding: 20px;
+    background: linear-gradient(to bottom, #33889d, #abbbae);
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+.item-footer {
+    margin: 5px;
+    text-align: center;
+}
+
+.item-footer img {
+    width: 40px;
+    height: auto;
+}
+
+.texto-footer p {
+    margin: 0;
+    color: white;
+    font-size: medium;
+}
+/*Fin Footer*/
