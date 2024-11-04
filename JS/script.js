@@ -12,6 +12,8 @@ function moverCarruselGaleria(direccion) {
     const totalImagenes = carruselGaleria.children.length;
     const maxIndice = totalImagenes - 3;
 
+    const anchoItem = carruselGaleria.children[0].offsetWidth;
+
     indiceCarruselGaleria += direccion;
     if (indiceCarruselGaleria < 0) {
         indiceCarruselGaleria = maxIndice;
@@ -19,7 +21,7 @@ function moverCarruselGaleria(direccion) {
         indiceCarruselGaleria = 0;
     }
 
-    carruselGaleria.style.transform = `translateX(-${indiceCarruselGaleria * (100 / 3)}%)`;
+    carruselGaleria.style.transform = `translateX(-${indiceCarruselGaleria * anchoItem}px)`;
 }
 
 function toggleFullScreen(element) {
