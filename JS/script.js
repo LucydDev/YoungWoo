@@ -9,10 +9,14 @@ let indiceCarruselGaleria = 0;
 
 function moverCarruselGaleria(direccion) {
     const carruselGaleria = document.querySelector('.contenido-carrusel');
-    const totalImagenes = carruselGaleria.children.length;
-    const maxIndice = totalImagenes - 3;
+    const miniaturas = carruselGaleria.children;
+    const totalImagenes = miniaturas.length;
 
-    const anchoItem = carruselGaleria.children[0].offsetWidth;
+    const visibleItems = 3;
+    const maxIndice = totalImagenes - visibleItems; 
+
+
+    const anchoItem = miniaturas[0].offsetWidth;
 
     indiceCarruselGaleria += direccion;
     if (indiceCarruselGaleria < 0) {
