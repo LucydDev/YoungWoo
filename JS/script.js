@@ -1,15 +1,17 @@
+//Menú Hamburguesa
 function toggleMenu() {
     const menu = document.querySelector('.menu');
     menu.classList.toggle('open');
 }
 
 function toggleSubmenu(element) {
-    // Verifica si el tamaño de pantalla es menor o igual a 600px
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 600) { // Solo afecta pantallas pequeñas
         const parentMenu = element.closest('.item-menu');
         parentMenu.classList.toggle('open');
     }
 }
+
+document.addEventListener('touchstart', function() {}, true);
 
 
 //Carrusel de Galería
