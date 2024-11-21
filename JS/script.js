@@ -11,7 +11,15 @@ function toggleSubmenu(element) {
     }
 }
 
-document.addEventListener('touchstart', function() {}, true);
+document.querySelector('.hamburger').addEventListener('click', function(event) {
+    toggleMenu();
+    event.preventDefault(); // Evita cualquier comportamiento predeterminado del clic
+});
+
+document.querySelector('.hamburger').addEventListener('touchstart', function(event) {
+    toggleMenu();
+    event.preventDefault(); // Evita cualquier comportamiento predeterminado del touch
+});
 
 
 //Carrusel de Galería
