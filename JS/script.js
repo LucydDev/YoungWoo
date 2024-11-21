@@ -1,20 +1,20 @@
 //Menú Hamburguesa
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('open');
-}
+if (window.innerWidth <= 600) { 
+    document.querySelector('.hamburger').addEventListener('touchstart', function(event) {
+        toggleMenu();
+        event.preventDefault(); 
+    });
 
-function toggleSubmenu(element) {
-    if (window.innerWidth <= 600) { // Solo afecta pantallas pequeñas
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    }
+    
+    function toggleSubmenu(element) {
         const parentMenu = element.closest('.item-menu');
         parentMenu.classList.toggle('open');
     }
 }
-
-document.querySelector('.hamburger').addEventListener('touchstart', function(event) {
-    toggleMenu();
-    event.preventDefault(); // Evita cualquier comportamiento predeterminado del touch
-});
 
 
 //Carrusel de Galería
