@@ -73,6 +73,11 @@ nav{
     display: flex;
 }
 
+.menu.open {
+    display: flex;
+    flex-direction: column;
+}
+
 .item-menu {
     position: relative; 
     display: inline-block;
@@ -83,18 +88,6 @@ nav{
 }
 
 .desplegable {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    z-index: 10;
-}
-/*.desplegable {
     display: none; 
     position: absolute; 
     top: 100%;
@@ -108,7 +101,7 @@ nav{
     min-width: 150px; 
     white-space: nowrap; 
     overflow: hidden; 
-}*/
+}
 
 .desplegable li {
     padding: 10px; 
@@ -124,25 +117,14 @@ nav{
     background-color:#68adbe;
 }
 
-.item-menu.open .desplegable {
-    display: block;
-}
-/*
 .item-menu:hover .desplegable {
     display: block;
-}*/
+}
 
 .item-menu:hover {
     background-color: white; 
     color: black;
 }
-
-.toggle-submenu {
-    cursor: pointer;
-    font-size: 0.9rem;
-    margin-left: 10px;
-}
-
 
 @media (max-width: 600px) {
     .menu {
@@ -152,10 +134,36 @@ nav{
 
     .hamburger {
         display: block;
+        font-size: 2rem;
+        cursor: pointer;
     }
 
     .menu.open {
         display: flex;
+    }
+
+    .desplegable {
+        display: none;
+    }
+
+    .item-menu.open .desplegable {
+        display: block;
+    }
+
+    .toggle-submenu {
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .desplegable {
+        display: none;
+        position: static;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        border: 1px solid #ccc;
     }
 }
 /*Fin Header y Menú*/

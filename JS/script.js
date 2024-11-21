@@ -4,8 +4,8 @@ function toggleMenu() {
 }
 
 function toggleSubmenu(element) {
-    const parent = element.closest('.item-menu'); // Encuentra el menú padre
-    parent.classList.toggle('open'); // Alterna la clase que muestra el submenú
+    const parentMenu = element.closest('.item-menu');
+    parentMenu.classList.toggle('open');
 }
 
 
