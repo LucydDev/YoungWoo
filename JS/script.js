@@ -1,11 +1,9 @@
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('open');
-}
-
 function toggleSubmenu(element) {
-    const parentMenu = element.closest('.item-menu');
-    parentMenu.classList.toggle('open');
+    // Verifica si el tamaño de pantalla es menor o igual a 600px
+    if (window.innerWidth <= 600) {
+        const parentMenu = element.closest('.item-menu');
+        parentMenu.classList.toggle('open');
+    }
 }
 
 
