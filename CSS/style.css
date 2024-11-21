@@ -83,6 +83,18 @@ nav{
 }
 
 .desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+/*.desplegable {
     display: none; 
     position: absolute; 
     top: 100%;
@@ -96,7 +108,7 @@ nav{
     min-width: 150px; 
     white-space: nowrap; 
     overflow: hidden; 
-}
+}*/
 
 .desplegable li {
     padding: 10px; 
@@ -112,13 +124,23 @@ nav{
     background-color:#68adbe;
 }
 
-.item-menu:hover .desplegable {
+.item-menu.open .desplegable {
     display: block;
 }
+/*
+.item-menu:hover .desplegable {
+    display: block;
+}*/
 
 .item-menu:hover {
     background-color: white; 
     color: black;
+}
+
+.toggle-submenu {
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 10px;
 }
 
 
@@ -312,6 +334,31 @@ nav{
     height: auto;
     max-height: 90%;
 }
+
+@media (max-width: 600px) {
+    .section2 {
+        height: auto; 
+        padding: 10px;
+    }
+
+    .carrusel {
+        max-width: 100%; 
+    }
+
+    .contenido-carrusel {
+        width: calc(100% * 1); 
+    }
+
+    .miniatura {
+        min-width: calc(100% / 1); 
+        padding: 5px;
+    }
+
+    .prev, .next {
+        font-size: 1.5em; 
+        padding: 5px;
+    }
+}
 /*Fin Galería*/
 
 
@@ -365,6 +412,17 @@ button.prev, button.next {
 
 button.prev { left: 10px; }
 button.next { right: 10px; }
+
+
+@media (max-width: 600px) {
+    .carrusel-items {
+        gap: 10px; 
+    }
+
+    .formato-actores {
+        flex: 0 0 100%; 
+    }
+}
 /*Fin Actores*/
 
 
@@ -411,6 +469,8 @@ h2 {
 .titulo-dato p, .contenido-dato p {
     margin: 0;
 }
+
+
 /*Fin Informacion tecnica*/
 
 

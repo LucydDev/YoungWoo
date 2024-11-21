@@ -3,6 +3,11 @@ function toggleMenu() {
     menu.classList.toggle('open');
 }
 
+function toggleSubmenu(element) {
+    const parent = element.closest('.item-menu'); // Encuentra el menú padre
+    parent.classList.toggle('open'); // Alterna la clase que muestra el submenú
+}
+
 
 //Carrusel de Galería
 let indiceCarruselGaleria = 0;
@@ -51,15 +56,49 @@ function toggleFullScreen(element) {
 }
 
 
+let startX = 0;
+let endX = 0;
+
+const carruselGaleria = document.querySelector('.contenido-carrusel');
+
+carruselGaleria.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+});
+
+carruselGaleria.addEventListener('touchmove', (event) => {
+    endX = event.touches[0].clientX;
+});
+
+carruselGaleria.addEventListener('touchend', () => {
+    const desplazamiento = endX - startX;
+    if (desplazamiento > 50) {
+        moverCarruselGaleria(-1); // Mover a la izquierda
+    } else if (desplazamiento < -50) {
+        moverCarruselGaleria(1); // Mover a la derecha
+    }
+});
+//Fin Carrusel de Galería
+
+
+
 // Carrusel de Actores
 const carruselActores = document.querySelector('.carrusel-items');
 const itemsActores = document.querySelectorAll('.formato-actores');
-const visibleItemsActores = 3;
+let visibleItemsActores = 3; 
 let indexActores = 0;
 
 function updateCarruselActores() {
     const offset = -indexActores * (100 / visibleItemsActores);
     carruselActores.style.transform = `translateX(${offset}%)`;
+}
+
+function updateResponsiveCarrusel() {
+    if (window.innerWidth <= 600) {
+        visibleItemsActores = 1; 
+    } else {
+        visibleItemsActores = 3; 
+    }
+    updateCarruselActores();
 }
 
 document.querySelector('.actores-carrusel .next').addEventListener('click', () => {
@@ -71,3 +110,7 @@ document.querySelector('.actores-carrusel .prev').addEventListener('click', () =
     indexActores = (indexActores - 1 + itemsActores.length) % itemsActores.length;
     updateCarruselActores();
 });
+
+window.addEventListener('resize', updateResponsiveCarrusel);
+
+updateResponsiveCarrusel();
