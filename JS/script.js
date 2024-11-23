@@ -1,17 +1,15 @@
 //Menú Hamburguesa
-document.addEventListener('DOMContentLoaded', function () {
-    // Evento para el menú hamburguesa
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', function () {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('open');
-        });
-    }
+    const menu = document.querySelector('.menu');
 
-    // Evento para desplegar submenús
-    const toggles = document.querySelectorAll('.toggle-submenu');
-    toggles.forEach(toggle => {
+    // Evento para abrir/cerrar menú
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+
+    // Evento para submenús
+    document.querySelectorAll('.toggle-submenu').forEach(toggle => {
         toggle.addEventListener('click', function () {
             if (window.innerWidth <= 600) {
                 const parentMenu = this.closest('.item-menu');
