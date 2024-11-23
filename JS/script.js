@@ -1,3 +1,4 @@
+// Menú Hamburguesa
 function toggleMenu() {
     const menu = document.querySelector('.menu');
     menu.classList.toggle('open');
@@ -10,17 +11,18 @@ function toggleSubmenu(element) {
     }
 }
 
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('hamburger')) {
-        toggleMenu();
-    }
-}, true);
+// Agregar evento de clic al menú
+document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
 
-document.addEventListener('touchstart', function(event) {
-    if (event.target.classList.contains('hamburger')) {
-        toggleMenu();
-    }
-}, true);
+// Agregar evento de toque a la ventana
+window.addEventListener('touchstart', toggleMenu, true);
+
+// Agregar evento de clic a los elementos que abren el menú
+document.querySelectorAll('.item-menu').forEach((element) => {
+    element.addEventListener('click', () => {
+        toggleSubmenu(element);
+    });
+});
 
 
 //Carrusel de Galería
