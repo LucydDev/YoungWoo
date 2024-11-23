@@ -128,8 +128,7 @@ nav{
 
 @media (max-width: 600px) {
     .menu {
-        display: none;
-        flex-direction: column;
+        display: none
     }
 
     .hamburger {

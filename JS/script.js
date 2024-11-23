@@ -1,20 +1,26 @@
-//Menú Hamburguesa
-if (window.innerWidth <= 600) { 
-    document.querySelector('.hamburger').addEventListener('touchstart', function(event) {
-        toggleMenu();
-        event.preventDefault(); 
-    });
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('open');
+}
 
-    function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('open');
-    }
-    
-    function toggleSubmenu(element) {
+function toggleSubmenu(element) {
+    if (window.innerWidth <= 600) { 
         const parentMenu = element.closest('.item-menu');
         parentMenu.classList.toggle('open');
     }
 }
+
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('hamburger')) {
+        toggleMenu();
+    }
+}, true);
+
+document.addEventListener('touchstart', function(event) {
+    if (event.target.classList.contains('hamburger')) {
+        toggleMenu();
+    }
+}, true);
 
 
 //Carrusel de Galería
