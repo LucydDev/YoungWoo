@@ -817,17 +817,23 @@ h2 {
 /*Fin Representación*/
 
 /*Contacto*/
-.titulo-contacto{
+.titulo-contacto {
     font-size: xx-large;
     text-align: center;
 }
 
 .formato-contacto {
-    width: 50%;
-    height: 630px;
+    width: 80%;
     margin: 50px auto;
     padding: 20px;
     border-radius: 15px;
+    background-color: #f9f9f9; /* Fondo por defecto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .titulo-contacto {
@@ -839,16 +845,12 @@ h2 {
     display: flex;
     align-items: center;
     gap: 20px;
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto;
-}
-
-.formato-form .formulario {
-    margin-left: 70px;
 }
 
 .formato-form img {
-    width: 100%;
+    max-width: 50%;
     border-radius: 10px;
 }
 
@@ -856,16 +858,14 @@ h2 {
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
 
-.formato-form label {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-    margin-top: 5px;
-    margin-bottom: 0;
+.mensaje{
+    resize: none;
 }
+
 
 input[type="text"], textarea {
     width: 100%;
@@ -873,11 +873,6 @@ input[type="text"], textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    text-align: start;
-}
-
-textarea::placeholder {
-    text-align: start;
 }
 
 button[type="submit"] {
@@ -888,11 +883,38 @@ button[type="submit"] {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    text-align: center;
 }
 
 button[type="submit"]:hover {
     background-color: #276876;
+}
+
+
+@media (max-width: 600px) {
+    .formato-contacto {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url("../Imagenes - Young Woo/form-contacto.png");
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto; 
+        color: white;
+    }
+
+    .formato-form {
+        flex-direction: row; 
+        gap: 10px;
+    }
+
+    .formato-form img {
+        display: none; 
+    }
+
+    .formato-form form {
+        width: 100%; 
+        padding: 10px;
+        border-radius: 10px;
+    }
 }
 /*Fin Contacto*/
 

@@ -1,26 +1,23 @@
-// Menú Hamburguesa
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('open');
-}
-
-function toggleSubmenu(element) {
-    if (window.innerWidth <= 600) { 
-        const parentMenu = element.closest('.item-menu');
-        parentMenu.classList.toggle('open');
+//Menú Hamburguesa
+document.addEventListener('DOMContentLoaded', function () {
+    // Evento para el menú hamburguesa
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', function () {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('open');
+        });
     }
-}
 
-// Agregar evento de clic al menú
-document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
-
-// Agregar evento de toque a la ventana
-window.addEventListener('touchstart', toggleMenu, true);
-
-// Agregar evento de clic a los elementos que abren el menú
-document.querySelectorAll('.item-menu').forEach((element) => {
-    element.addEventListener('click', () => {
-        toggleSubmenu(element);
+    // Evento para desplegar submenús
+    const toggles = document.querySelectorAll('.toggle-submenu');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            if (window.innerWidth <= 600) {
+                const parentMenu = this.closest('.item-menu');
+                parentMenu.classList.toggle('open');
+            }
+        });
     });
 });
 
@@ -88,9 +85,9 @@ carruselGaleria.addEventListener('touchmove', (event) => {
 carruselGaleria.addEventListener('touchend', () => {
     const desplazamiento = endX - startX;
     if (desplazamiento > 50) {
-        moverCarruselGaleria(-1); // Mover a la izquierda
+        moverCarruselGaleria(-1);
     } else if (desplazamiento < -50) {
-        moverCarruselGaleria(1); // Mover a la derecha
+        moverCarruselGaleria(1);
     }
 });
 //Fin Carrusel de Galería
@@ -130,3 +127,4 @@ document.querySelector('.actores-carrusel .prev').addEventListener('click', () =
 window.addEventListener('resize', updateResponsiveCarrusel);
 
 updateResponsiveCarrusel();
+
